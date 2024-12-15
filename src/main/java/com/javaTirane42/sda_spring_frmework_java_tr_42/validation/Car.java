@@ -1,10 +1,15 @@
 package com.javaTirane42.sda_spring_frmework_java_tr_42.validation;
 
 
-    public class Car {
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
 
+public class Car {
+@NotEmpty
         private Long id;
-
+@NotNull
+@Length
         private String name;
 
         private Integer wheelsNumber;
