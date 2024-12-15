@@ -1,5 +1,7 @@
 package com.javaTirane42.sda_spring_frmework_java_tr_42.validation;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
@@ -16,6 +18,8 @@ public class Person {
 
     private  String address;
 
+    @JsonIgnore  // fsheh dokumentin json per te mos u shfaqur ne web
+    @AssertTrue
     public boolean isAddressValid(){
         return  address != null && address.split(" ").length >=2;
     }
