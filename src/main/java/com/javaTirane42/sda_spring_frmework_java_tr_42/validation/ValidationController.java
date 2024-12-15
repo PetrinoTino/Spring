@@ -13,4 +13,5 @@ public class ValidationController {
     public Person addPerson (@Valid @RequestBody  Person person){
         return person;
     }
+    @PostMapping("car")
 }
