@@ -8,26 +8,20 @@ import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.validation.annotation.Validated;
 
+ @Validated
 
-@Validated
-public class Person {
-
+ public class Person {
     @NotNull
     @Length(min = 3,max = 32)
     private String firstname;
-
     @Email
     private String email;
-
-
     private  String address;
-
     @JsonIgnore  // fsheh dokumentin json per te mos u shfaqur ne web
     @AssertTrue
     public boolean isAddressValid(){
         return  address != null && address.split(" ").length >=2;
     }
-
     public Person(String firstname, String email, String address) {
         this.firstname = firstname;
         this.email = email;
