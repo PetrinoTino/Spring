@@ -29,16 +29,9 @@ public class Person {
     }
 
     public Person(String firstname, String email, String address) {
-
-
         this.firstname = firstname;
-
-
         this.email = email;
-
-
         this.address = address;
-
     }
 
     public String getFirstname() {
