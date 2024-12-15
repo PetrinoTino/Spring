@@ -7,7 +7,8 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix="sda.java.tirane42")
 public class PropertiesGroup {
 private String propertyA;
-private String getPropertyB;
+private String PropertyB;
+
 
     public String getPropertyA() {
         return propertyA;
@@ -17,11 +18,11 @@ private String getPropertyB;
         this.propertyA = propertyA;
     }
 
-    public String getGetPropertyB() {
-        return getPropertyB;
+    public String getPropertyB() {
+        return PropertyB;
     }
 
-    public void setGetPropertyB(String getPropertyB) {
-        this.getPropertyB = getPropertyB;
+    public void setPropertyB(String propertyB) {
+        PropertyB = propertyB;
     }
 }
