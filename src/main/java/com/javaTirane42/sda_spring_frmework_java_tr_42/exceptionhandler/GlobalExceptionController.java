@@ -9,4 +9,8 @@ public class GlobalExceptionController {
     public void runGlobalSda(){
         throw new SdaException("Global SDA Exception");
     }
+    @GetMapping("global-specific")
+    public void runGlobalSpecific(){
+        throw new SpecificSdaException("Global SDA Exception");
+    }
 }
