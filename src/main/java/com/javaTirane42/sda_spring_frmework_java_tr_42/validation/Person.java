@@ -16,6 +16,10 @@ public class Person {
 
     private  String address;
 
+    public boolean isAddressValid(){
+        return  address != null && address.split(" ").length >=2;
+    }
+
     public Person(String firstname, String email, String address) {
 
 
@@ -24,7 +28,7 @@ public class Person {
 
         this.email = email;
 
-@
+
         this.address = address;
 
     }
