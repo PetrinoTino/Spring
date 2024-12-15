@@ -1,6 +1,7 @@
 package com.javaTirane42.sda_spring_frmework_java_tr_42.validation;
 
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
@@ -9,9 +10,9 @@ public class Car {
 @NotEmpty
         private Long id;
 @NotNull
-@Length
+@Length(min = 3)
         private String name;
-
+@Min(1)
         private Integer wheelsNumber;
 
         public Car(Long id, String name, Integer wheelsNumber) {
