@@ -1,11 +1,15 @@
 package com.javaTirane42.sda_spring_frmework_java_tr_42.validation;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.validation.annotation.Validated;
 
+
+@Validated
 public class Person {
 
     @NotNull
