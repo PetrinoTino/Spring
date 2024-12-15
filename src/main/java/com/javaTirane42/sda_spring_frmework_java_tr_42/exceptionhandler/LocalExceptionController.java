@@ -26,4 +26,37 @@ public class LocalExceptionController {
     public Error handleSdaException(SdaException e) {
         return new Error(e.getMessage());
     }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(SpecificSdaException.class)
+    public Error handleSpecificSdaException(SpecificSdaException e) {
+        return new Error(e.getMessage());
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
