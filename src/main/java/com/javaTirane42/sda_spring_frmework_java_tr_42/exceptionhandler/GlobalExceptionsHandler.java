@@ -11,5 +11,8 @@ public class GlobalExceptionsHandler {
     public Error handleSdaException(SdaException e){
     return new Error(e.getMessage());
 }
-
+    @ExceptionHandler(SpecificSdaException.class)
+    public Error handleSdaException(SpecificSdaException e){
+        return new Error(e.getMessage());
+    }
 }
