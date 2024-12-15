@@ -17,5 +17,4 @@ public class FirstController {
     public Integer showFirstNumber() {
         return randomNumberProvider.getValue();
     }
-
 }
